@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <%- include('includes/head', { title: post.title }) %>
+    <link rel="stylesheet" href="/styles/post-detail.css">
+    <link rel="stylesheet" href="/styles/reply.css">
+    <link rel="stylesheet" href="/styles/create-reply.css">
+</head>
+
+<body>
+    <%- include('includes/header') %>
+    <section id="post-detail">
+        <h2>
+            <%= post.title %>
+        </h2>
+        <p id="post-item-author">
+            <span id="author-name"><%= post.author.name %></span> | <time datetime="<%= post.date %>" id="date">
+                    <%= post.readableDate %>
+                </time>
+        </p>
+        <p class="post-item-content">
+            <%= post.content %>
+        </p>
+        <div id="post-control">
+            <a class="btn-alt" href="/post/<%= post._id %>/identify"><img src="https://www.svgrepo.com/show/491459/pencil.svg" alt="댓글_작성" style="width:20px;"></a>
+            <a class="btn-alt" href="/post/<%= post._id %>/identify-delete"><img src="https://www.svgrepo.com/show/363152/trash-bold.svg" alt="삭제" style="width:20px;"></a>
+        </div>
+        <hr>
+        <p>댓글(<%= replies.length %>)</p>
+        <%- include('includes/create-reply', { postId: post._id } ) %>
+        <% if (replies.length===0) { %>
+            <p id="no-reply"> 댓글이 없습니다.</p>
+        <% } else {%>
+            <% for (const reply of replies) { %>
+            <%- include('includes/reply', { reply: reply, postId: post._id }) %>
+            <% } %>
+        <% } %>
+    </section>
+    <footer></footer>
+    <script src="/scripts/navbar.js"></script>
+</body>
+
+</html>

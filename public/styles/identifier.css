@@ -1,0 +1,67 @@
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+#pwcheck-header {
+    margin-top: 100px;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3rem;
+
+    background: linear-gradient(rgba(222, 170, 245, 1), rgba(175, 141, 236, 1), rgba(141, 124, 226, 1));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    line-height: 5rem;
+
+    animation: fadeInDown 0.7s;
+}
+
+#identifier {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 1.3rem;
+    margin: 0px auto;
+    width: 25%;
+    border: 2px solid rgba(50, 54, 75, 0.669);
+    border-radius: 0.3rem;
+    padding: 1.5rem;
+}
+
+#edit-post-form {
+    display: grid;
+    justify-items: center;
+}
+
+#inputer {
+    margin: 1rem;
+    width: 70%;
+    display: grid;
+    grid-template-columns: 1fr 0.2fr;
+    column-gap: 10px;
+    box-sizing: border-box;
+}
+
+#pw {
+    padding: 0.5rem;
+}
+
+
+#checkfailed {
+    margin: 2rem;
+    text-align: center;
+    color: rgb(255, 70, 3);
+
+    animation: fadeInDown 0.7s;
+}

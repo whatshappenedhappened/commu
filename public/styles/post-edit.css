@@ -1,0 +1,163 @@
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+#edit-header {
+    margin-top: 100px;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3rem;
+
+    background: linear-gradient(rgba(222, 170, 245, 1), rgba(175, 141, 236, 1), rgba(141, 124, 226, 1));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    line-height: 5rem;
+
+    animation: fadeInDown 0.7s;
+}
+
+#edit-post {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 1.3rem;
+    margin: 0px auto;
+    width: 30%;
+    border: 2px solid rgba(50, 54, 75, 0.669);
+    border-radius: 0.3rem;
+    padding: 1.5rem;
+}
+
+
+#author_name, #author_pw, #title, #textbox {
+    font-family: inherit;
+}
+
+.edit-post-labels {
+    display: block;
+    margin-bottom: 1%;
+}
+
+#edit-post-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#author_name, #author_pw, #title {
+    margin-bottom: 3%;
+    padding: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#textbox {
+    resize: none;
+    width: 100%;
+    height: 300px;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    box-sizing: border-box;
+    padding: 0.5rem;
+}
+
+#savebutton {
+    justify-self: center;
+    align-self: center;
+    font-family: inherit;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+/* @keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+#edit-post-header {
+    margin-top: 100px;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3rem;
+
+    background: linear-gradient(rgba(222, 170, 245, 1), rgba(175, 141, 236, 1), rgba(141, 124, 226, 1));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    line-height: 5rem;
+
+    animation: fadeInDown 0.7s;
+}
+
+#edit-post {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 1.3rem;
+    margin: 0px auto;
+    width: 30%;
+    border: 2px solid rgba(50, 54, 75, 0.669);
+    border-radius: 0.3rem;
+    padding: 1.5rem;
+}
+
+
+#author_name, #author_pw, #title ,textarea {
+    font-family: inherit;
+}
+
+.create-post-labels {
+    display: block;
+    margin-bottom: 1%;
+}
+
+#create-post-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#author_name, #author_pw, #title {
+    margin-bottom: 2%;
+    padding: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    margin-top: 8%;
+    margin-bottom: 4%;
+    box-sizing: border-box;
+    padding: 0.5rem;
+}
+
+#savebutton {
+    justify-self: center;
+    align-self: center;
+    font-family: inherit;
+    font-size: 1.2rem;
+} */

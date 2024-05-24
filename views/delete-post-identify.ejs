@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('includes/head', { title: '비밀번호 확인' }) %>
+    <link rel="stylesheet" href="/styles/identifier.css">
+</head>
+<body>
+    <%- include('includes/header') %>
+    <h1 id="pwcheck-header">비밀번호 확인</h1>
+    <div id="identifier">
+        <form action="/post/<%= postId %>/identify-delete" method="POST" id="edit-post-form">
+            <div id="inputer">
+                <input type="password" name="pw" id="pw" required>
+                <button class="btn-alt"><img src="https://www.svgrepo.com/show/501130/check-mark.svg" alt="확인" width="20px"></button>
+            </div>
+            <% if (failed) { %>
+                <p id="checkfailed">비밀번호가 일치하지 않습니다.</p>
+            <% } %>
+        </form>
+    </div>
+</body>
+</html>

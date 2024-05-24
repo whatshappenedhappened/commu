@@ -1,0 +1,30 @@
+.reply-display {
+    font-family: "Noto Sans KR", sans-serif;
+    width: 100%;
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr); */
+    /* border: 1px solid black; */
+    padding-bottom: 3%;
+}
+
+#reply-intro {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 1fr 1fr;
+    justify-items: start;
+    align-items: center;
+    column-gap: 5px;
+    margin-bottom: 1%;
+}
+
+#user {
+    font-weight: bold;
+    color: white;
+    padding: 0px 10px;
+    border-radius: 10px;
+    background-color: rgb(29, 32, 62);
+}
+
+#reply-content {
+    padding-left: 15px;
+    white-space: pre-line;
+}

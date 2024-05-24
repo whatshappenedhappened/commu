@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('includes/head', { title: "수정하기" }) %>
+    <link rel="stylesheet" href="/styles/post-edit.css">
+</head>
+<body>
+    <%- include('includes/header') %>
+    <h1 id="edit-header">수정하기</h1>
+    <article id="edit-post">
+        <form action="/post/<%= post[0]._id %>/edit" method="POST" id="edit-post-form">
+            <div>
+                <label class="edit-post-labels" for="author_name">작성자</label>
+                <input type="text" id="author_name" name="author_name" value="<%= post[0].author.name %>" required maxlength="10" minlength="2" placeholder="username">
+                <label class="edit-post-labels" for="author_pw">비밀번호</label>
+                <input type="password" id="author_pw" name="author_pw" value="<%= post[0].author.pw %>" required maxlength="20" minlength="4" placeholder="password">
+            </div>
+            <div id="titlediv">
+                <label class="edit-post-labels" for="title">제목</label>
+                <input type="text" id="title" name="title" value="<%= post[0].title %>">
+            </div>
+            <div id="content">
+                <!-- <label for="content">내용</label> -->
+                <textarea name="content" id="textbox" rows="10" required><%= post[0].content %></textarea>
+            </div>
+            <button class="btn-alt" id="savebutton"><img src="https://www.svgrepo.com/show/522324/upload.svg" alt="게시글_저장" style="width:50px"></button>
+        </form>
+    </article>
+</body>
+</html>

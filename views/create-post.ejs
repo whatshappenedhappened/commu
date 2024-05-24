@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <%- include('includes/head', { title: '작성하기' }) %>
+    <link rel="stylesheet" href="/styles/form.css">
+</head>
+<body>
+    <%- include('includes/header') %>
+    <h1 id="create-header">작성하기</h1>
+    <article id="create-post">
+        <form action="/main" method="POST" id="create-post-form">
+            <div id="user">
+                <label class="create-post-labels" for="author_name">작성자</label>
+                <input type="text" id="author_name" name="author_name" required maxlength="10" minlength="2" placeholder="username">
+                <label class="create-post-labels" for="author_pw">비밀번호</label>
+                <input type="password" id="author_pw" name="author_pw" required maxlength="20" minlength="4" placeholder="password">
+            </div>
+            <div id="titlediv">
+                <label class="create-post-labels" for="title">제목</label>
+                <input type="text" id="title" name="title" required placeholder="title">
+            </div>
+            <div id="content">
+                <!-- <label for="content">내용</label> -->
+                <textarea name="content" id="textbox" required placeholder="Feeling lucky today :D" maxlength="700"></textarea>
+            </div>
+            <button class="btn-alt" id="savebutton"><img src="https://www.svgrepo.com/show/522324/upload.svg" alt="게시글_저장" style="width:50px"></button>
+        </form>
+    </article>
+</body>
+</html>

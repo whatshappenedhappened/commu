@@ -1,0 +1,175 @@
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+
+body {
+    line-height: 1.5rem;
+}
+
+#body-items {
+    margin-top: 100px;
+}
+
+header {
+    padding: 1rem 1rem;
+    font-family: "black han sans", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(29, 32, 62);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* logo */
+header #logo a {
+    margin: 10px;
+    font-size: 40px;
+    text-align: center;
+    text-decoration: none;
+
+    background: linear-gradient(rgba(222, 170, 245, 1), rgba(175, 141, 236, 1), rgba(141, 124, 226, 1));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    /* -webkit-text-stroke: 0.04rem white; */
+
+    transition: all 0.5s ease;
+}
+
+header #logo #logo-dot {
+    color: rgba(102, 255, 153, 1);
+
+    /* transition: all 0.7s ease-out; */
+}
+
+header #logo a:hover {
+    /* transform: translateY(-15px); */
+    color: rgba(102, 255, 153, 1);
+    background-position: 0 -100%;
+}
+
+/* header #logo a:hover #logo-dot {
+    transform: translateX(2rem);
+    color:white;
+} */
+
+
+
+
+
+header ul {
+    display: flex;
+    list-style: none;
+}
+
+header li {
+    margin: 10px;
+}
+
+/* header menu */
+header li a {
+    /* font-family: "noto sans kr", sans-serif; */
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: white;
+
+    background: linear-gradient(rgba(222, 170, 245, 1), rgba(175, 141, 236, 1), rgba(141, 124, 226, 1));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    transition: all 0.2s ease;
+}
+
+header li a:hover {
+    color: white;
+}
+
+
+/* searchbar */
+#searchbar {
+    position: relative;
+}
+
+#searchbar img {
+    padding: 0.5rem;
+    position: absolute;
+    width: 10%;
+    background-color: white;
+    top: 0px;
+    left: -30px;
+    border-radius: 5px;
+}
+
+header #searchbar input {
+    width: 160%;
+    min-width: 40%;
+    padding: 0.5rem;
+    align-self: center;
+    font-family: "noto sans kr", sans-serif;
+    font-weight: bold;
+    border: 1px solid white;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* body {
+    background-color: rgb(44, 47, 72);
+} */
+
+/* for navbarColorShift() */
+.color-shift-1 {
+    background-color: rgba(29, 32, 62, 0.85);
+    /* background-color: red; */
+}
+
+/* .color-shift-2 {
+    background-color: red;
+}
+
+.color-shift-3 {
+    background: linear-gradient(rgba(222, 170, 245, 1), rgba(175, 141, 236, 1), rgba(141, 124, 226, 1));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+} */
+
+#noposts {
+    margin: 0px auto;
+    margin-top: 100px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3rem;
+
+    background: linear-gradient(rgba(222, 170, 245, 1), rgba(175, 141, 236, 1), rgba(141, 124, 226, 1));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    line-height: 3rem;
+    animation: fadeInDown 1s;
+}
+
+
+.btn-alt {
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: unset;
+}
+
+.btn-alt:hover {
+    background-color: rgba(102, 255, 153, 0.2);
+}

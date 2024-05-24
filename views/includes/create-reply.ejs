@@ -1,0 +1,38 @@
+<form action="/post/<%= postId %>/create-reply" method="POST" id="create-reply-form">
+    <div class="reply-user">
+        <label for="username" class="label-user"><img src="https://www.svgrepo.com/show/438740/person.svg" alt="댓글_작성자" style="width:35px;"></label>
+        <input type="text" id="username" name="username" required maxlength="10" minlength="2" placeholder="name" class="input-group">
+        <label for="password" class="label-user"><img src="https://www.svgrepo.com/show/525397/key.svg" alt="댓글_비밀번호" style="width:30px;"></label>
+        <input type="password" id="password" name="password" required maxlength="10" minlength="4" placeholder="password" class="input-group">
+        <span></span>
+    </div>
+    <div class="reply-content">
+        <textarea name="content" id="reply-textbox" rows="1" placeholder="Add a comment" required maxlength="200" class="input-group"></textarea>
+        <button class="btn-alt" id="write"><img src="https://www.svgrepo.com/show/491307/arrow-from-line-down.svg" alt="댓글_작성" style="width:30px;"></button>
+    </div>
+    <script>
+        let textarea = document.getElementById("reply-textbox");
+        let writeBtn = document.getElementById("write");
+        let replyContentDiv = document.getElementsByClassName('reply-content');
+
+        textarea.onfocus = function() {
+            onfocus();
+        };
+
+        function onfocus () {
+            textarea.style.height = "150px";
+            // textarea.style.backgroundColor = "black";
+            // textarea.row = 5;
+            replyContentDiv.style("grid-template-columns = 1fr 1fr");
+            // writeBtn.style.color = "white";
+        }
+
+        function colorShift () {
+            writeBtn.style.color = "white";
+        }
+
+        function onblur () {
+            textarea.style.height = "auto";
+        }
+    </script>
+</form>

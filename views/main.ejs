@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('includes/head', { title: '전체 게시글' }) %>
+    <link rel="stylesheet" href="/styles/post-item.css">
+<body>
+    <%- include('includes/header') %>
+    <section id="body-items">
+        <!-- <h1>전체 게시물(<%= posts.length %>)</h1> -->
+        <!-- <hr> -->
+        <% if (posts.length === 0) { %>
+            <h2 id="noposts"> No posts are found! </h2>
+        <% } else { %>        
+            <% for (const post of posts) { %>
+                <%- include('post-item', { post }) %>
+                <!-- <hr> -->
+            <% } %>
+        <% } %>
+    </section>
+
+    <script src="/scripts/navbar.js"></script>
+    <script src="/scripts/infiniteScroll.js"></script>
+</body>
+</html>

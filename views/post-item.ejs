@@ -1,0 +1,18 @@
+<article class="post-item" onclick="location.href='/post/<%= post._id %>'">
+    <h3 id="post-title">
+        <a href="/post/<%= post._id %>">
+            <%= post.title %>
+        </a>
+    </h3>
+    <p id="post-item-author">
+        <span id="author-name"><%= post.author.name %></span> | <time datetime="<%= post.date %>" id="date">
+                <%= post.date.toLocaleDateString('kr-KR', {
+                    weekday: "long",
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric"
+                }) %>
+            </time>
+    </p>
+    <p class="post-item-content"><%= post.content %></p>
+</article>

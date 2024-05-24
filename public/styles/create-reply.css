@@ -1,0 +1,53 @@
+#create-reply-form {
+    width: 100%;
+    margin-top: 3%;
+    font-family: "Noto Sans KR", sans-serif;
+    display: grid;
+}
+
+.reply-user {
+    margin-bottom: 2%;
+    display: grid;
+    grid-template-columns: 50px 1fr 70px 1fr 2fr;
+    column-gap: 5px;
+    width: 100%;
+}
+
+.reply-content {
+    display: grid;
+    grid-template-columns: 1fr 0.1fr;
+    column-gap: 10px;
+}
+
+#username, #password, #reply-textbox {
+    font-family: "Noto Sans KR", sans-serif;
+    padding: 5px;
+}
+
+#reply-textbox {
+    padding: 10px;
+    display: grid;
+    align-self: center;
+    resize: none;
+    /* transition: all 600ms ease; */
+}
+
+#reply-textbox:focus {
+    display: grid;
+    align-self: center;
+    resize: none;
+}
+
+/* .reply-user label {
+    display: block;
+} */
+
+#write {
+    /* display: none; */
+    align-self: center;
+}
+
+.label-user {
+    align-self: center;
+    justify-self: center;
+}

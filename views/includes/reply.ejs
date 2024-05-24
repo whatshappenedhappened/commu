@@ -1,0 +1,14 @@
+<div class="reply-display">
+    <div id="reply-intro">
+        <span id="user"><%= reply.username %></span><span id="date"><%= reply.date.toLocaleDateString('kr-KR', {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+        })  %></span>
+            <form action="/post/<%= postId %>/delete-reply/<%= reply._id %>" method="POST" id="delete-reply-form">
+                <button class="btn-alt"><img src="https://www.svgrepo.com/show/490254/trash-can.svg" alt="삭제" style="width:15px;"></button>
+            </form>
+    </div>
+    <p id="reply-content"><%= reply.content %> </p>
+</div>
